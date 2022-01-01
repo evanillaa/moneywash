@@ -18,8 +18,7 @@ RegisterNetEvent("moneywash:server:checkInv", function()
             Player.Functions.RemoveItem('markedbills', amt)
             TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items['markedbills'], "remove")
             TriggerClientEvent('moneywash:client:startTimer', src, amt, worth)
-            TriggerClientEvent('QBCore:Notify', src, amt .. ' Inky Packs Set To Wash At $' .. worth .. ' Each.',
-                'primary')
+            TriggerClientEvent('QBCore:Notify', src, amt .. ' Inky Packs Set To Wash At $' .. worth .. ' Each.', 'primary')
         end
     else
         TriggerClientEvent('QBCore:Notify', src, 'You Have No Inky Packs...', 'error')
